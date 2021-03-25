@@ -1,0 +1,50 @@
+ *{
+     box-sizing: border-box;
+     font-family: 'Roboto Mono', monospace;
+ }
+ body{
+    background-color: rgb(72, 138, 46);
+ }
+ .card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    width: 60%;
+    height: 60vh;
+    font-size: xx-large;
+   
+    
+} 
+.quiz-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quiz-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+p{
+    display: inline;
+}
+.quiz-body{
+    flex-grow: 3;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.timer-card{
+    width: 10%;
+    border-radius: 8%;
+    background-color: rgb(70, 63, 63);
+    color: white;
+    box-shadow: 1px 2px 1px 2px #dbd6d6;
+    text-align: center;
+}
+.btn{
+    font-size: xx-large;
+    float: right;
+}

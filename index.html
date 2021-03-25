@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving Quiz</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <section class="quiz-container">
+            <div class="card">
+                <div class="quiz-header">
+                    <div class="question-text m-2">
+                        
+                        <p>
+                            some question
+                        </p>
+                    </div>
+                    <div id="question-timer" class="timer-card m-2 p-2">
+                        60
+                    </div>
+                    
+                </div>
+                <hr>
+                <div class="quiz-body">
+                    <div class="chocie-div m-2">
+                        <p>
+                            choice A
+                        </p>
+                    </div>
+                    <div class="chocie-div m-2">
+                        <p>
+                            choice b
+                        </p>
+                    </div>
+                    <div class="chocie-div m-2">
+                        <p>
+                            choice c
+                        </p>
+                    </div>
+                    <div class="chocie-div m-2">
+                        <p>
+                            choice d
+                        </p>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="quiz-footer">
+                    <button class="btn btn-primary m-2">Next</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script>
+        var countDown = 60*1000;
+        var x = setInterval(function() {
+          countDown-=1000
+          document.getElementById("question-timer").innerHTML =countDown*0.001;
+          if (countDown*0.001 < 0) {
+            clearInterval(x);
+            document.getElementById("question-timer").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
